@@ -68,7 +68,7 @@ stop_spark:
 
 configure_hive:
 	echo "Installing JDBC for Java 8. If you use other Java version see: https://jdbc.postgresql.org/download.html#current"
-	wget https://jdbc.postgresql.org/download/postgresql-9.4.1209.jar
+	wget https://jdbc.postgresql.org/download/postgresql-9.4.1209.jar --no-check-certificate
 	mv postgresql-9.4.1209.jar ${hive_home}/lib/
 	#enable JDBC connection
 	echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?>' >> ${hive_home}/conf/hive-site.xml
